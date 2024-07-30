@@ -19,5 +19,6 @@ Realizar operações em cascata só faz sentido em relacionamentos Pai - Filho (
         
 
         Encontrei referências de cascade DETACH e LOCK, como eles funcionam?
+        
         Cascade DETACH faz com que a operação detach, quando executada no pai, também seja executada no filho. Dizemos que uma entidade é detached quando ela não está sendo gerenciada pelo EntityManager. Isso acontece quando exectamos o método detach(entidade) do EntityManager, quando a transação é comitada ou dá rollback.
         Cascade LOCK não faz parte do JPA mas sim do Hibernate. Basicamente quando você adquirir um lock na entidade pai, essa operação será realizada também nos filhos.
